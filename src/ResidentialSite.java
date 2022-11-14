@@ -1,16 +1,16 @@
 public class ResidentialSite extends Site{
 
     @Override
-    public double base() {
-        return super.base();
+    public double getBaseAmount() {
+        return super.getBaseAmount();
     }
 
     @Override
-    public double tax() {
-        return super.tax();
+    public double getTaxAmount() {
+        return super.getTaxAmount();
     }
 
     public double getBillableAmount(){
-        return tax()+base();
+        return getTaxAmount()+getBaseAmount();
     }
 }

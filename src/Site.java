@@ -3,12 +3,15 @@ public class Site {
     protected int _rate;
     protected static double TAX_RATE;
 
-    public double base(){
+    public double getBillableAmount(){
+        return getBaseAmount()+getBillableAmount();
+    }
+    public double getBaseAmount(){
         return _units*_rate ;
     }
 
-    public double tax(){
-        return base()*Site.TAX_RATE ;
+    public double getTaxAmount(){
+        return getBillableAmount()*Site.TAX_RATE ;
     }
 
 

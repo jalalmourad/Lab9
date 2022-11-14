@@ -1,16 +1,16 @@
 public class LifelineSite extends Site{
 
     @Override
-    public double base() {
-        return super.base()*0.5;
+    public double getBaseAmount() {
+        return super.getBaseAmount()*0.5;
     }
 
     @Override
-    public double tax() {
-        return super.tax()*0.2;
+    public double getTaxAmount() {
+        return super.getTaxAmount()*0.2;
     }
 
     public double getBillableAmount(){
-        return tax()+base();
+        return getTaxAmount()+getBaseAmount();
     }
 }
